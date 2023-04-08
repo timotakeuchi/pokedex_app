@@ -39,5 +39,5 @@ let pokemonList = [
 // }
 
 pokemonList.getAll.forEach (function(pokemon) {
-    return ('pokemonList.name ' + '(' + 'height:' + ' pokemonList.height')
+    document.write('pokemonList.name ' + '(' + 'height:' + ' pokemonList.height')
 });
