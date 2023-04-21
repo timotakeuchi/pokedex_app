@@ -27,9 +27,17 @@ const pokemonRepository = (function () {
   pokemonRepository.add({name: 'Charmandar', height: 0.6, type: 'Fire'});
   
   pokemonRepository.getAll().forEach(function(pokemon){
-    if (pokemon.height >= 2) {
-        document.write(`<li>${pokemon.name} (height: ${pokemon.height}) - Wow, that's big!</li>`)
-    } else {
-        document.write(`<li>${pokemon.name} (height: ${pokemon.height})</li>`)}
+    // if (pokemon.height >= 2) {
+    //     document.write(`<li>${pokemon.name} (height: ${pokemon.height}) - Wow, that's big!</li>`)
+    // } else {
+    //     document.write(`<li>${pokemon.name} (height: ${pokemon.height})</li>`)}
+    let pokemonList = document.querySelector('.pokemon-list')
+    let pkListItem = document.createElement('li')
+    let button = document.createElement('button')
+    button.innerText('pokemon');
+    button.classList.add('.pkbutton')
+    pokemonList.firstChild.appendChild(button)
   });
+
   
+
