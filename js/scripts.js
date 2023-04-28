@@ -29,10 +29,10 @@ let pokemonRepository = (function () {
   
   function addListItem (pokemon) { 
    //list of variables in the function
-    let pokemonList = document.querySelector('.pokemon-list')
-    let pkListItem = document.createElement('li')
-    let button = document.createElement('button')
-    button.addEventListener('click', pokemon => showDetails(pokemon))
+    let pokemonList = document.querySelector('.pokemon-list');
+    let pkListItem = document.createElement('li');
+    let button = document.createElement('button');
+    button.addEventListener('click', pokemon => showDetails(pokemon));
   
    //button features
     button.innerText = pokemon.name;
