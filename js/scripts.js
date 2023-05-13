@@ -24,16 +24,14 @@ let pokemonRepository = (function () {
     let pokemonList = document.querySelector('.pokemon-list');
     let pkmnListItem = document.createElement('li');
     let button = document.createElement('button');
-    
-  
    //button features
     button.innerText = pokemon.name;
     button.classList.add('pkbutton');
-    
    //appending children
     pokemonList.appendChild(pkmnListItem);
     pkmnListItem.appendChild(button);
-    button.addEventListener('click', pokemon => showDetails(pokemon));
+   //event listener
+    button.addEventListener('click', event => showDetails(pokemon));
   }
   
   return {
