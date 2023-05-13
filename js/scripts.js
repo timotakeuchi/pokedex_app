@@ -1,5 +1,5 @@
 let pokemonRepository = (function () {
-  let pokemonList = [];
+  let pkmnList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   
   function add(pokemon) {
@@ -8,7 +8,7 @@ let pokemonRepository = (function () {
       "name" in pokemon &&
       "detailsUrl" in pokemon 
     ) {
-      pokemonList.push(pokemon);
+      pkmnList.push(pokemon);
     } else {
       console.log("pokemon is not correct");
     }
@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
   }
 
   function getAll() {
-    return pokemonList;
+    return pkmnList;
   }
 
   function showDetails(pokemon) {
