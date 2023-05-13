@@ -18,25 +18,22 @@ let pokemonRepository = (function () {
   function getAll() {
     return pkmnList;
   }
-
-  function showDetails(pokemon) {
-    console.log(pokemon);
-  }
   
   function addListItem (pokemon) { 
    //list of variables in the function
     let pokemonList = document.querySelector('.pokemon-list');
-    let pkListItem = document.createElement('li');
+    let pkmnListItem = document.createElement('li');
     let button = document.createElement('button');
-    button.addEventListener('click', pokemon => showDetails(pokemon));
+    
   
    //button features
     button.innerText = pokemon.name;
     button.classList.add('pkbutton');
     
    //appending children
-    pokemonList.appendChild(pkListItem);
-    pkListItem.appendChild(button);
+    pokemonList.appendChild(pkmnListItem);
+    pkmnListItem.appendChild(button);
+    button.addEventListener('click', pokemon => showDetails(pokemon));
   }
   
   return {
