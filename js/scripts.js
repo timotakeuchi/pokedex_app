@@ -73,7 +73,8 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
-    addListItem: addListItem 
+    addListItem: addListItem,
+    loadList: loadList
   };
 })();
   
@@ -84,7 +85,7 @@ let pokemonRepository = (function () {
   //       document.write(`<li>${pokemonList[i].name} (height: ${pokemonList[i].height})</li>`)
   //   }
   // }
-  pokemonRepository.add({name: 'Charmandar', height: 0.6, types: 'Fire'});
+  // pokemonRepository.add({name: 'Charmandar', height: 0.6, types: 'Fire'});
   
 pokemonRepository.getAll().forEach(function(pokemon){pokemonRepository.addListItem(pokemon)});
     // if (pokemon.height >= 2) {
