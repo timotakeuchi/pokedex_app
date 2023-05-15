@@ -87,7 +87,11 @@ let pokemonRepository = (function () {
   // }
   // pokemonRepository.add({name: 'Charmandar', height: 0.6, types: 'Fire'});
   
-pokemonRepository.getAll().forEach(function(pokemon){pokemonRepository.addListItem(pokemon)});
+pokemonRepository.loadList().then(function()
+{pokemonRepository.getAll().forEach(function(pokemon)
+{pokemonRepository.addListItem(pokemon);
+  });
+});
     // if (pokemon.height >= 2) {
     //     document.write(`<li>${pokemon.name} (height: ${pokemon.height}) - Wow, that's big!</li>`)
     // } else {
