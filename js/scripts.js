@@ -116,6 +116,17 @@ let pokemonRepository = (function () {
     }
   })
 
+  modalContainer.addEventListener('click', (e) => {
+    let target = e.target;
+    if (target === modalContainer){
+      hideModal();
+    }
+  })
+   
+   button.addEventListener('click', function(){
+     showDetails(item);
+   });
+
   return {
     add: add,
     getAll: getAll,
