@@ -91,8 +91,8 @@ let pokemonRepository = (function () {
     //Pokemon Image Element
     let imageElement = document.createElement('img');
     imageElement.setAttribute("src", item.image)
-    imageElement.setAttribute("width", "50");
-    imageElement.setAttribute("height", "50");
+    imageElement.setAttribute("width", "120");
+    imageElement.setAttribute("height", "120");
     imageElement.setAttribute("alt", "Pokemon Image")
     //Append Child Elements
     modal.appendChild(closeButtonElement);
@@ -114,7 +114,7 @@ let pokemonRepository = (function () {
     if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
       hideModal();
     }
-  })
+  });
 
   modalContainer.addEventListener('click', (e) => {
     let target = e.target;
