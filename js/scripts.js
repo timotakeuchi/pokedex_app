@@ -27,15 +27,17 @@ let pokemonRepository = (function () {
     //button features
     button.innerText = pokemon.name;
     button.classList.add('pkbutton');
-    button.classList.add('btn');
-    button.classList.add('btn-primary');
-    pkmnListItem.classList.add('list-group-item');
+    button.classList.add('btn', 'btn-primary');
+    button.setAttribute('data-toggle', 'modal');
+    button.setAttribute('data-target', 'modalContainer');
+    pkmnListItem.classList.add('list-group');
     //appending children
     pokemonList.appendChild(pkmnListItem);
     pkmnListItem.appendChild(button);
     //event listener
-    button.addEventListener('click', event => showDetails(pokemon));
+    button.addEventListener('click', () => {if(!$('modalContainer').hasClass('is-visible')){$('modalContainer').addClass('is-visible');}});
   }
+  
 
   function loadList() {
     return fetch(apiUrl).then(function (response) {
@@ -130,7 +132,8 @@ let pokemonRepository = (function () {
  }
 
   function hideModal(){
-    modalContainer.classList.remove('is-visible');
+    $('modalContainer').removeClass('is-visible');
+    // modalContainer.classList.remove('is-visible');
   }
 
   window.addEventListener('keydown', (e) => {
