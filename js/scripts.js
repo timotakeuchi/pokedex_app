@@ -27,6 +27,9 @@ let pokemonRepository = (function () {
     //button features
     button.innerText = pokemon.name;
     button.classList.add('pkbutton');
+    button.classList.add('btn');
+    button.classList.add('btn-primary');
+    pkmnListItem.classList.add('list-group-item');
     //appending children
     pokemonList.appendChild(pkmnListItem);
     pkmnListItem.appendChild(button);
