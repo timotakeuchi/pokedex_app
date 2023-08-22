@@ -92,8 +92,7 @@ let pokemonRepository = (function () {
     let typesElement = $("<p>" + "types : " + item.types + "</p>");
     let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
     modalTitle.append(nameElement);
-    modalBody.append(imageElementFront);
-    modalBody.append(imageElementBack);
+    modalBody.append(imageElement);
     modalBody.append(heightElement);
     modalBody.append(weightElement);
     modalBody.append(typesElement);
