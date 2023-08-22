@@ -85,10 +85,8 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty();
     let nameElement = $("<h1>" + item.name + "<h1>");
-    let imageElementFront = $('<img class="modal-img" style="width:120%">');
-    imageElementFront.attr("src", item.imageUrlFront);
-    let imageElementBack = $('<img class="modal-img" style="width:120%">');
-    imageElementBack.attr("src", item.imageUrlBack);
+    let imageElement = $('<img class="modal-img" style="width:120%">');
+    imageElement.attr("src", item.image);
     let heightElement = $("<p>" + "height : " + item.height + "</p>");
     let weightElement = $("<p>" + "weight : " + item.weight + "</p>");
     let typesElement = $("<p>" + "types : " + item.types + "</p>");
