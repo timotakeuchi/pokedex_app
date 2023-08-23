@@ -30,7 +30,7 @@ let pokemonRepository = (function () {
     button.classList.add('pkbutton','btn','btn-primary');
     button.setAttribute('data-toggle', 'modal');
     button.setAttribute('data-target', 'modalContainer');
-    pkmnListItem.classList.add('list-group');
+    pkmnListItem.classList.add('list-group-item');
     //appending children
     pokemonList.appendChild(pkmnListItem);
     pkmnListItem.appendChild(button);
