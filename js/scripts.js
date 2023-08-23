@@ -133,7 +133,7 @@ let pokemonRepository = (function () {
  }
 
   function hideModal(){
-    $('modalContainer').removeClass('is-visible');
+    $('modalContainer').addClass('is-visible');
     // modalContainer.classList.remove('is-visible');
   }
 
