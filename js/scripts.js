@@ -72,8 +72,10 @@ let pokemonRepository = (function () {
   }
 
   function showDetails(item) {
-    loadDetails(item);
+    loadDetails(item).then(function(){
     showModal(item);
+    console.log(item);
+   })
   };
 
   let modalContainer = document.querySelector('#modal-container');
@@ -175,3 +177,5 @@ pokemonRepository.loadList().then(function () {
     //     document.write(`<li>${pokemon.name} (height: ${pokemon.height}) - Wow, that's big!</li>`)
     // } else {
     //     document.write(`<li>${pokemon.name} (height: ${pokemon.height})</li>`)}
+
+    
