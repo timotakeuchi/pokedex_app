@@ -39,7 +39,6 @@ let pokemonRepository = (function () {
     });
   }
   
-
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -90,10 +89,22 @@ let pokemonRepository = (function () {
     let nameElement = $("<h1>" + item.name + "<h1>");
     let imageElement = $('<img class="modal-img" style="width:120%">');
     imageElement.attr("src", item.image);
-    let heightElement = $("<p>" + "height : " + item.height + "</p>");
-    let weightElement = $("<p>" + "weight : " + item.weight + "</p>");
-    let typesElement = $("<p>" + "types : " + item.types + "</p>");
-    let abilitiesElement = $("<p>" + "abilities : " + item.abilities + "</p>");
+    let heightElement = $("<p>" + "Height : " + item.height + "</p>");
+    let weightElement = $("<p>" + "Weight : " + item.weight + "</p>");
+    let typeName
+      if(item.types.length === 1){
+      typeName = item.types[0].type.name
+      }else if (item.types.length === 2){
+      typeName = item.types[0].type.name + ', ' + item.types[1].type.name 
+      }
+    let typesElement = $('<p>' + 'Types: ' + typeName + '</p>')
+    let abilitiesName
+      if(item.abilities.length === 1){
+      abilitiesName = item.abilities[0].ability.name
+      }else if (item.abilities.length === 2){
+      abilitiesName = item.abilities[0].ability.name + ', ' + item.abilities[1].ability.name 
+      }
+    let abilitiesElement = $('<p>' + 'Abilities : ' + abilitiesName + '</p>');
     modalContainer.append(modalBody);
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
@@ -101,7 +112,6 @@ let pokemonRepository = (function () {
     modalBody.append(weightElement);
     modalBody.append(typesElement);
     modalBody.append(abilitiesElement);
-
  }
 
   function hideModal(){
