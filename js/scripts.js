@@ -31,9 +31,13 @@ let pokemonRepository = (function () {
     button.setAttribute('data-toggle', 'modal');
     button.setAttribute('data-target', '#modal-container');
     pkmnListItem.classList.add('list-group-item','mt-3');
+    // let prevImg = document.createElement('img');
+    // prevImg.classList.add('img-preview');
+    // prevImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${t.id}.png`;
     //appending children
     pokemonList.appendChild(pkmnListItem);
     pkmnListItem.appendChild(button);
+    // button.appendChild(prevImg);
     //event listener
     button.addEventListener('click', () => {showDetails(pokemon);
     });
