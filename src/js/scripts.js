@@ -1,3 +1,4 @@
+
 let pokemonRepository = (function () {
   let pkmnList = [];
   
@@ -91,7 +92,7 @@ let pokemonRepository = (function () {
     modalTitle.empty();
     modalBody.empty();
     let nameElement = $("<h1>" + item.name + "<h1>");
-    let imageElement = $('<img class="modal-img" style="width:120%">');
+    let imageElement = $('<img class="modal-img mx-auto d-block" style="height:200px">');
     imageElement.attr("src", item.image);
     let heightElement = $("<p>" + "Height : " + item.height + "</p>");
     let weightElement = $("<p>" + "Weight : " + item.weight + "</p>");
@@ -109,7 +110,6 @@ let pokemonRepository = (function () {
       abilitiesName = item.abilities[0].ability.name + ', ' + item.abilities[1].ability.name 
       }
     let abilitiesElement = $('<p>' + 'Abilities : ' + abilitiesName + '</p>');
-    modalContainer.append(modalBody);
     modalTitle.append(nameElement);
     modalBody.append(imageElement);
     modalBody.append(heightElement);
