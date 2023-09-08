@@ -1,0 +1,1 @@
+:root{--button-color:#ffffff;--bg-color:#f73122;--txt-color:#00000}body{background-color:var(--bg-color)}.pkbutton{border:none;text-decoration:none;color:var(--txt-color);background-color:var(--button-color);font-size:16px;margin:10px;padding:10px;border-radius:3px;transition-duration:.2s;transition-property:opacity}.pkbutton:focus,.pkbutton:hover{cursor:pointer;opacity:.8}
